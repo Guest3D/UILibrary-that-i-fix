@@ -1237,15 +1237,15 @@ function library:AddWindow(title, options)
 						textbox.ZIndex = textbox.ZIndex + (windows * 10)
 						textbox:GetChildren()[1].ZIndex = textbox:GetChildren()[1].ZIndex + (windows * 10)
 
-						textbox.Changed:Connect(function(ep) -- its focuslost
-							--if ep then
+						textbox.FocusLost:Connect(function(ep)
+							if ep then
 								if #textbox.Text > 0 then
 									pcall(callback, textbox.Text)
-									--if textbox_options.clear then
+									if textbox_options.clear then
 										textbox.Text = ""
-									--end
+									end
 								end
-							--end
+							end
 						end)
 
 						return textbox
