@@ -1240,7 +1240,6 @@ function library:AddWindow(title, options)
 						textbox:GetPropertyChangedSignal("Text"):Connect(function()
 								if #textbox.Text > 0 then
 									pcall(callback, textbox.Text)
-                  print(textbox.Text)
 								end
 						end)
 
