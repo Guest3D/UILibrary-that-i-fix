@@ -71,9 +71,9 @@ function Library.Section(Sectione)
 
     -- Title setter
     Section.Title = function(Title)
-        --if SectionTab and SectionTab:FindFirstChild("TabLabel") then
+        if SectionTab and SectionTab:FindFirstChild("TabLabel") then
             SectionTab.TabLabel.Title.Text = Title
-        --end
+        end
     end
 
     -- Icon setter
