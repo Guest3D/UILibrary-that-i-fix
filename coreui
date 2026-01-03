@@ -30,7 +30,7 @@ local Sections = {
 function Library.Section(Sectione)
     local Section = {}
 
-    local SectionTab = HubBar:FindFirstChild(Sections[Sectione][2])
+    local SectionTab = HubBarContainer:FindFirstChild(Sections[Sectione][2])
     local SectionView = PageViewInnerFrame:FindFirstChild(Sections[Sectione][1])
 
     if SectionView then
