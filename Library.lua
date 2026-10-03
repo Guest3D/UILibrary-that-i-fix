@@ -4095,7 +4095,7 @@ Library.BuildConfigPage = function(self: Library, Window: any)
 	local ThemePage = Page:SubPage({ Name = "Theme" })
 	local MenuPage = Page:SubPage({ Name = "Menu" })
 
-	local ListSection = Manager:Section({ Name = "Configs"; Side = "Left"; Icon = "folder" })
+	local ListSection = Manager:Section({ Name = "Configs"; Side = "Left"; Icon = "settings" })
 	local ActionsSection = Manager:Section({ Name = "Actions"; Side = "Right"; Icon = "settings" })
 	local ThemeSection = ThemePage:Section({ Name = "Colors"; Side = "Left"; Icon = "palette" })
 	local ThemePrev = ThemePage:Section({ Name = "Preview"; Side = "Right"; Icon = "eye" })
