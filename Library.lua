@@ -80,6 +80,11 @@ local UserInputService = Services:GetService("UserInputService")
 local PlayerService = Services:GetService("Players")
 local RunService = Services:GetService("RunService")
 local TweenService = Services:GetService("TweenService")
+-- Load icons
+local IconsV2 = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Footagesus/Icons/main/Main-v2.lua"))()
+
+-- optional. Set Icons Type (default is lucide)
+IconsV2.SetIconsType("lucide") -- lucide, craft and more...
 
 local Client = PlayerService.LocalPlayer
 
@@ -266,7 +271,7 @@ local function ResolveIcon(Icon: number | string?): string
 	local Name = AsString:lower():gsub("^lucide:", ""):gsub("%s+", "-")
 	local Id = Lucide[Name] or Lucide[Name:gsub("-", "")]
 	if Id then
-		return "rbxassetid://" .. tostring(Id)
+		return IconsV2.GetIcon(tostring(id))
 	end
 	-- unknown name: empty (caller can hide), never force hash
 	return ""
