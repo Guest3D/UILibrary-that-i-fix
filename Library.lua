@@ -1665,7 +1665,7 @@ Library.SubElements.Toggle = function(self: Library, propertyTable: {})
 	Library.ThemeLink(ToggleGrad, "Gradient", "AccentDark", "Accent")
 
 	Toggle.Set = function(state: boolean?, Silent: boolean?)
-		state = state or not Toggle.State
+		state = state
 		Toggle.State = state
 
 		Tween(Overlay, { BackgroundTransparency = state and 0 or 1 }, 0.1)
@@ -1696,10 +1696,10 @@ Library.SubElements.Toggle = function(self: Library, propertyTable: {})
 	end
 
 	Button.Activated:Connect(function()
-		Toggle.Set()
+		Toggle.Set(not Toggle.State)
 	end)
 
-	Toggle.Set(Toggle.State, true)
+	Toggle.Set(propertyTable.State, true)
 	return Toggle
 end
 
