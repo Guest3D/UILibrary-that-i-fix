@@ -4079,7 +4079,7 @@ Library.ToggleMenu = function(State: boolean?)
 		Library.OpenPopup.Close()
 	end
 end
-
+--[[
 UserInputService.InputBegan:Connect(function(Input, GameProcessed)
 	if GameProcessed then
 		return
@@ -4088,6 +4088,7 @@ UserInputService.InputBegan:Connect(function(Input, GameProcessed)
 		Library.ToggleMenu()
 	end
 end)
+]]
 
 Library.BuildConfigPage = function(self: Library, Window: any)
 	local Page = Window:Page({ Icon = "save" })
@@ -4338,7 +4339,7 @@ Library.BuildConfigPage = function(self: Library, Window: any)
 			Library.Notify({ Title = "Theme"; Content = "Reset to default"; Type = "Info" })
 		end;
 	})
-
+--[[
 	local MenuKeyLabel = MenuSection:Label({ Text = "Menu key" })
 	MenuKeyLabel:Keybind({
 		Title = "Menu";
@@ -4357,7 +4358,7 @@ Library.BuildConfigPage = function(self: Library, Window: any)
 			end
 		end
 	end)
-
+]]
 	MenuSection:Slider({
 		Name = "UI scale";
 		Suffix = "%";
