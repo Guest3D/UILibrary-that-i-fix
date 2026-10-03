@@ -4378,6 +4378,7 @@ Library.BuildConfigPage = function(self: Library, Window: any)
 			Library.SetWatermark(nil, State)
 		end;
 	})
+--[[
 	local KBL = MenuSection:Label({ Text = "Keybind list" })
 	KBL:Toggle({
 		State = Library.KeybindList.Enabled;
@@ -4386,6 +4387,7 @@ Library.BuildConfigPage = function(self: Library, Window: any)
 			Library.SetKeybindList(State)
 		end;
 	})
+]]
 	MenuSection:Button({
 		Name = "Hide menu";
 		Width = 0.5;
