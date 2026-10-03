@@ -269,9 +269,9 @@ local function ResolveIcon(Icon: number | string?): string
 	end
 
 	local Name = AsString:lower():gsub("^lucide:", ""):gsub("%s+", "-")
-	local Id = Lucide[Name] or Lucide[Name:gsub("-", "")]
-	if Id then
-		return IconsV2.GetIcon(tostring(id))
+	--local Id = Lucide[Name] or Lucide[Name:gsub("-", "")]
+	if Name then
+		return IconsV2.GetIcon(tostring(Icon))
 	end
 	-- unknown name: empty (caller can hide), never force hash
 	return ""
